@@ -1,0 +1,27 @@
+.about {
+    &__left, &__right {
+        width: 49%;
+        font-family: Roboto;
+        font-size: 18px;
+        line-height: 25px;
+        p {
+            margin: 16px 0;
+            text-align: justify;
+        }
+        img {
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        @include r(1000px) {
+            width: 100%;
+        }
+    }
+    @include r(1000px) {
+        &__left {
+            margin-bottom: 20px;
+        }
+    }
+}

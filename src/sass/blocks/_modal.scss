@@ -1,0 +1,100 @@
+.sign {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .close {
+        position: absolute;
+        top: 54px;
+        right: 54px;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        &:after, &:before {
+            content: '';
+            width: 15px;
+            position: absolute;
+            height: 2px;
+            background-color: #999999;
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+    }
+    &__form, &__descr {
+        border-radius: 10px;
+        background: white;
+        padding: 40px;
+        margin: 0 8px;
+        width: 100%;
+        height: fit-content;
+        min-width: 400px;
+        label {
+            font-family: Roboto;
+            font-size: clamp(18px, 4vw, 18px);
+            line-height: clamp(18px, 4vw, 22px);
+            margin-top: 8px;
+            span {
+                padding: 8px;
+            }
+            input {
+                border-radius: 10px;
+                background-color: #F5F5F5;
+                width: 100%;
+                border: none;
+                font-size: clamp(18px, 4vw, 18px);
+                line-height: clamp(18px, 4vw, 22px);
+                height: 48px;
+                padding-left: 10px;
+            }
+            &.date {
+                margin-right: 16px;
+            }
+        }
+        button {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: $color3;
+            width: 100%;
+        }
+        ul {
+            list-style: inside;
+            margin-top: 8px;
+            li {
+                font-family: Roboto;
+                font-size: clamp(18px, 4vw, 18px);
+                line-height: clamp(18px, 4vw, 25px);
+                color: #999999;
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        p {
+            font-family: Roboto;
+            font-size: clamp(18px, 4vw, 20px);
+            line-height: clamp(18px, 4vw, 28px);
+        }
+    }
+    &__descr {
+        max-width: 580px;
+        @include r(850px) {
+            display: none;
+        }
+    }
+    &__form {
+        max-width: 420px;
+        @include r(450px) {
+            padding: 20px;
+            max-width: inherit;
+            width: calc(100vw - 32px);
+            margin: 0;
+            min-width: 300px;
+        }
+    }
+}

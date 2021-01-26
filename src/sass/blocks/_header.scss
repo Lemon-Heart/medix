@@ -1,0 +1,296 @@
+.header {
+  // z-index: 150;
+  width: 100%;
+  background-color: white;
+
+  &__top {
+    padding: 20px 0;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    @include r(1060px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    transform: translate(0,-100%);
+    background: white;
+    width: 100%;
+    z-index: 100;
+  }
+  &.transition {
+    transition: transform .4s cubic-bezier(.215,.61,.355,1);
+  }
+  &.show {
+    transform: translate(0, 0);
+    box-shadow: 0 0 8px 6px lightgrey;
+  }
+}
+
+.logo {
+  margin-right: 32px;
+
+  img {
+    width: 100%;
+  }
+
+  @include r(600px) {
+    order: -5;
+  }
+
+  @include r(370px) {
+    margin-right: 0;
+    width: 75%;
+  }
+}
+
+.search {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  position: relative;
+  font-weight: 400;
+  color: #B4B4B4;
+  flex-grow: 1;
+
+  @include r(1060px) {
+    width: 100%;
+    order: 1;
+    margin-top: 20px;
+  }
+
+  @include r(830px) {
+    width: 60%;
+    order: 1;
+    margin-top: 20px;
+  }
+
+  @include r(700px) {
+    width: auto;
+  }
+
+  @include r(600px) {
+    width: 100%;
+  }
+
+  form {
+    box-sizing: border-box;
+  }
+
+  input {
+    border: none;
+    color: #B4B4B4;
+    width: 100%;
+    padding: 15px 17px;
+    border: 2px solid #F5F5F5;
+    border-radius: 10px;
+    transition: .2s;
+
+    &:focus {
+      border: 2px solid $color3;
+      transition: .2s;
+    }
+  }
+  input::placeholder {color: #B4B4B4;}
+  input::-webkit-input-placeholder {color:#B4B4B4;}
+  input::-moz-placeholder {color:#B4B4B4;}
+  input:-moz-placeholder {color:#B4B4B4;}
+  input:-ms-input-placeholder {color:#B4B4B4;}
+
+  button {
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    width: 49px;
+    height: 88%;
+    
+    &:hover {
+
+      svg {
+        fill: $color3;
+        transition: .05s;
+        transform: scale(1.01);
+      }
+    }
+
+    svg {
+      transition: .05s;  
+    }
+  }
+}
+
+.contacts-head {
+  margin: 0 32px;
+
+  @include r(830px) {
+    margin: 0;
+  }
+
+  @include r(600px) {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  a {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+  }
+  
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #B1B1B1;
+    display: block;
+
+    @include r(600px) {
+      margin-left: 20px;
+      display: inline;
+    }
+
+    @include r(370px) {
+      margin-left: 0;
+      display: block;
+    }
+  }
+}
+
+.appointment {
+
+  @include r(830px) {
+    order: 2;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  @include r(600px) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  button {
+    border-color: $color3;
+    color:  $color3;
+    width: 213px;
+
+    @include r(600px) {
+      width: 100%;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  order: 5;
+  flex-grow: 1;
+  margin-top: 20px;
+
+  .main-menu {
+
+    @include r(600px) {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  li {
+
+    &.first a {
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    &.main-item {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    a {
+      padding: 10px;
+      margin: 0 15px;
+
+      @include r (600px) {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+
+    &.dd_menu {
+      order: 1;
+      position: relative;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+
+      @include r(600px) {
+        display: none;
+      }
+    }
+
+    &.dd_menu-2 {
+      position: relative;
+
+      @include r(600px) {
+        align-items: flex-start;
+
+        .second-menu svg {
+          top: 2px;
+        }
+      }
+
+      & > a {
+        margin-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.dropdown-menu, .dropdown-menu-2 {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.04);
+  display: none;
+  border: 1px solid #2BA59E;
+  position: absolute;
+  top: 40px;
+  right: -25px;
+  z-index: 100;
+
+  li {
+    padding: 10px;
+    display: flex;
+  }
+}
+
+.dropdown-menu-2 {
+  @include r (600px) {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: -15px;
+    border: none;
+  }
+}
+
+.contacts-head,
+.appointment,
+.menu,
+.search {
+  @include r(600px) {
+    display: none;
+  }
+}
+
+

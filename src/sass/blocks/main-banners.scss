@@ -1,0 +1,196 @@
+.main-banners-wrapper {
+    width: 100%;
+    @include r(850px) {
+        flex-direction: column;
+    }
+}
+
+.main-banner {
+    max-width: 1074px;
+    width: 100%;
+    margin-right: 16px;
+    border-radius: 10px;
+    background-color: #DEFBFF;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    @include r(850px) {
+        margin: 0 0 30px 0;
+    }
+}
+
+.main-banner__text {
+    margin: auto 80px auto 80px;
+    max-width: 600px;
+    padding: 30px 0;
+    @include r(480px) {
+        margin: auto 30px auto 30px;
+    }
+    h2 {
+        color: #424B54;
+    }
+    p {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: #666666;
+    }
+    .button {
+        font-size: 20px;
+        border-color: darken(#DEFBFF, 50%)!important;
+        color: darken(#DEFBFF, 50%);
+        background-color: #DEFBFF;
+        border-radius: 30px;
+        width: 144px;
+        &:hover {
+            background-color: darken(#DEFBFF, 50%);
+        }
+    }
+}
+
+.main-banners-slider-wrapper {
+    margin: 0;
+    flex-shrink: 0;
+    @include r(1280px) {
+        max-width: 311px;
+        height: 100%;
+    }
+    @include r(850px) {
+        max-width: inherit;
+        width: calc(100% + 16px);
+        margin-left: -8px;
+    }
+    @include r(650px) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.main-banners-slider {
+    max-width: 638px;
+    width: 100%;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    @include r(1280px) {
+        display: flex;
+        grid-gap: 0;
+    }
+    @include r(850px) {
+        max-width: inherit;
+    }
+}
+
+.main-slide {
+    max-width: 311px;
+    min-width: 284px;
+    border-radius: 10px;
+    padding: 32px;
+    box-sizing: border-box;
+    max-height: 300px;
+    @include r(1200px) {
+        max-height: inherit;
+    }
+    @include r(850px) {
+        max-width: inherit;
+        width: calc(50% - 16px);
+        margin: 0 8px;
+        max-height: 300px;
+    }
+    @include r(650px) {
+        max-width: inherit;
+        width: 100%;
+        margin: 0;
+    }
+    p {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        color: #666666;
+        overflow-y: auto;
+        @extend %custom-scroll;
+    }
+    .button {
+        width: 100%;
+        margin-top: auto;
+    }
+    &:nth-child(1) {
+        background-color: #FFECDE;
+        .button {
+            border-color: darken(#FFECDE, 50%);
+            color: darken(#FFECDE, 50%);
+            background-color: #FFECDE;
+            &:hover {
+                background-color: darken(#FFECDE, 50%);
+            }
+        }
+    }
+    &:nth-child(2) {
+        background-color: #FBDBE7;
+        .button {
+            border-color: darken(#FBDBE7, 50%);
+            color: darken(#FBDBE7, 50%);
+            background-color: #FBDBE7;
+            &:hover {
+                background-color: darken(#FBDBE7, 50%);
+            }
+        }
+    }
+    &:nth-child(3) {
+        background-color: #DCF6E3;
+        .button {
+            border-color: darken(#DCF6E3, 50%);
+            color: darken(#DCF6E3, 50%);
+            background-color: #DCF6E3;
+            &:hover {
+                background-color: darken(#DCF6E3, 50%);
+            }
+        }
+    }
+    &:nth-child(4) {
+        background-color: #F0EAFC;
+        .button {
+            border-color: darken(#F0EAFC, 50%);
+            color: darken(#F0EAFC, 50%);
+            background-color: #F0EAFC;
+            &:hover {
+                background-color: darken(#F0EAFC, 50%);
+            }
+        }
+    }
+}
+
+.main-slider-arrow-prev,
+.main-slider-arrow-next,
+.main-slider-pagination {
+    top: auto;
+    width: auto;
+    height: auto;
+    bottom: -17px;
+    display: none;
+    position: absolute;
+    @include r(1280px) {
+        display: block;
+    }
+}
+
+.main-slider-arrow-prev {
+    left: calc(50% - 80px);
+}
+
+.main-slider-arrow-next {
+    right: calc(50% - 80px);
+}
+
+.main-slider-pagination {
+    bottom: -9px!important;
+}

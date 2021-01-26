@@ -1,0 +1,67 @@
+.static-svg, .animation-svg {
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    stroke: #000;
+
+    path {
+      fill: none;
+
+      stroke-width: 3.5;
+      stroke-miterlimit: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+}
+
+.animation-icon {
+    cursor: pointer;
+    position: relative;
+  
+    display: block;
+    
+    height: 48px;
+    width: 48px;  
+    
+    svg path {
+        fill: none;
+        stroke-width: 1;
+        // stroke: $color2;
+    }
+  
+    &:hover {
+        .static-svg svg {
+            opacity: 0;
+            transition: 0.25s opacity ease;
+        }
+
+        .animation-svg svg path {
+        stroke-dashoffset: 0 !important;
+        transition: .75s stroke-dashoffset cubic-bezier(.165,.84,.44,1);
+
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$i * 0.1}s;
+                }
+            }
+        }
+    }
+}
+
+.animation-svg svg circle, .animation-svg svg ellipse,
+.animation-svg svg line, .animation-svg svg path,
+.animation-svg svg polyline, .static-svg svg circle,
+.static-svg svg ellipse, .static-svg svg line,
+.static-svg svg path, .static-svg svg polyline {
+  fill: none;
+  stroke-width: 2!important;
+  stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

@@ -1,0 +1,11 @@
+.breadcrumbs {
+    > *:not(:last-child) {
+        margin-right: 10px;
+    }
+    > *:not(:first-child) {
+        margin-left: 7px;
+    }
+    > *:last-child {
+        color: #CCCCCC;
+    }
+}

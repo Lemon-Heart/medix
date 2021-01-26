@@ -1,0 +1,192 @@
+.spec {
+    width: 100%;
+    &__item {
+        padding: 40px;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color1;
+        box-sizing: border-box;
+        height: fit-content;
+        transition: .2s;
+        max-width: 420px;
+        &.swiper-slide {
+            width: calc(25% - 16px);
+            @include r(1750px) {
+                width: calc(33.33% - 16px);
+            }
+            @include r(1100px) {
+                width: calc(50% - 16px);
+            }
+            @include r(750px) {
+                width: calc(100% - 16px);
+                max-width: none;
+            }
+        }
+        @include r(400px) {
+            padding: 40px 20px;
+        }
+        ul {
+            padding-left: 20px;
+            list-style: disc;
+            li {
+                color: $color4;
+                span {
+                    color: $color1;
+                }
+            }
+        }
+        button {
+            flex: 0 0 auto;
+            margin: auto;
+            color: $color4;
+            border-color: $color4;
+            &:hover {
+                background-color: $color4;
+                border-color: $color4;
+            }
+        }
+        p {
+            color: $color1;
+        }
+        &:hover {
+            box-shadow: 0px 4px 7px $color4;
+            transition: .2s;
+        }
+    }
+    &__img {
+        border-radius: 16px;
+        width: 64px;
+        height: 64px;
+        margin-right: 16px;
+    }
+    &__specialty {
+        font-family: Roboto;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color4;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        color: #666666;
+    }
+    &__descr {
+        overflow-y: auto;
+        max-height: 200px;
+        @extend %custom-scroll;
+    }
+    &__footer {
+        margin-top: auto;
+        .link, a {
+            color: $color4;
+            margin: 10px auto auto;
+            padding: 0 8px;
+            font-weight: 500;
+        }
+    }
+    &--page {
+        @include r(1620px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        aside {
+            @include r(1200px) {
+                order: 20;
+                margin-left: 0;
+                margin-top: 32px;
+            }
+        }
+    } 
+    &__body {
+        .gallery-top {
+            max-width: 420px;
+            width: 100%;
+            @include r(500px) {
+                max-width: calc(100vw - 108px);
+            }
+            @include r(450px) {
+                max-width: calc(100vw - 32px);
+            }
+            .spec-item-slide {
+                margin-bottom: 16px;
+                .swiper-slide {
+                    max-width: 420px!important;
+                    height: 530px;
+                    width: 100%!important;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+        .gallery-thumbs {
+            .swiper-slide {
+                width: 93px!important;
+                height: 93px!important;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                opacity: .5;
+                &.swiper-slide-thumb-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__detail {
+        margin-left: 32px;
+        @include r(1620px) {
+            order: 10;
+            margin-left: 0;
+            margin-top: 32px;
+        }
+        @include r(1200px) {
+            flex: 1 1 0;
+            margin-left: 32px;
+            margin-top: 0;
+        }
+        @include r(850px) {
+            flex: auto;
+            width: 100%;
+            margin-left: 0;
+            margin-top: 32px;
+        }
+        p {
+            margin-top: 16px;
+            font-family: Roboto;
+            font-size: clamp(18px, 4vw, 20px);
+            line-height: clamp(18px, 4vw, 30px);
+        }
+        ul {
+            list-style: inside;
+            margin-top: 16px;
+            li {
+                font-family: Roboto;
+                font-size: clamp(18px, 4vw, 20px);
+                line-height: clamp(18px, 4vw, 28px);
+            }
+        }
+    }
+}
+
+.allSpec {
+    display: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #CCCCCC;
+    padding: 4px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    @include r(640px) {
+        display: flex;
+    }
+}

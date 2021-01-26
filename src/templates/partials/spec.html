@@ -1,0 +1,59 @@
+<div class="container mt40 col ovfHidden">
+    <div class="row s-b">
+        <h2 class="effect2">Наши специалисты</h2><a class="allSpec" href="#">Все</a>
+    </div>
+    <div class="ovf-wr--m mt24">
+        <div class="spec swiper-container">
+            <div class="swiper-wrapper spec__items">
+                {% include "partials/spec-item.html" %}
+                <div class="swiper-slide spec__item col">
+                    <div class="spec__head vert-center mb16 row">
+                        <div class="spec__img">
+                            <img src="img/spec-img.png" alt="">
+                        </div>
+                        <div class="col">
+                            <div class="spec__specialty">Специальность</div>
+                            <div class="spec__name">Фамилия Имя Отчество</div>
+                        </div>
+                    </div>
+                    <div class="spec__descr mb16">
+                        <p>Длинное описание, вызывающее переполнение контейнера. Длинное описание, вызывающее переполнение контейнера. Длинное описание, вызывающее переполнение контейнера.</p>
+                        <ul class="mt16">
+                            <li><span>Значимость этих проблем</span></li>
+                            <li><span>настолько очевидна, что</span></li>
+                            <li><span>семантический разбор</span>.</li>
+                            <li><span>Значимость этих проблем</span></li>
+                            <li><span>настолько очевидна, что</span></li>
+                            <li><span>семантический разбор</span>.</li>
+                        </ul>
+                    </div>
+                    <div class="spec__footer fl-wrap vert-center s-b row">
+                        <button class="button1 animation1">Записаться на прием</button>
+                        <a class="effect1" href="#">Подробнее</a>
+                    </div>
+                </div>
+                {% include "partials/spec-item.html" %}
+                {% include "partials/spec-item.html" %}
+                {% include "partials/spec-item.html" %}
+                {% include "partials/spec-item.html" %}
+                {% include "partials/spec-item.html" %}            
+            </div>
+        </div>
+        <div class="swiper-button-prev common-arrow-prev arrowAnim arrowAnim--left">
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <g fill="none" stroke="#EB4A86" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="swiper-button-next common-arrow-next arrowAnim">
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                <g fill="none" stroke="#EB4A86" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
+                    <circle class="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>
+                    <path class="arrow-icon--arrow" d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"></path>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>

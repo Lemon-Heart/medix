@@ -1,0 +1,43 @@
+// LIBS
+//@import 'swiper/src/swiper';
+//@import './libs/fancybox';
+
+// VARIABLES AND MIXINS
+@import './base/variables';
+@import './base/mixins';
+
+// LIBS
+@import './blocks/swiper.min';
+
+// DEFAULTS
+@import './base/fonts';
+@import './base/normalize';
+@import './generated/sprite-svg';
+@import './base/common';
+@import './base/grid';
+
+// BLOCKS
+@import './blocks/_header';
+@import './blocks/_footer';
+@import './blocks/_modal';
+@import './blocks/menu-icon';
+@import './blocks/menu-arrow';
+@import './blocks/swiper-custom';
+@import './blocks/main-banners';
+@import './blocks/directions';
+@import './blocks/spec';
+@import './blocks/news';
+@import './blocks/about';
+@import './blocks/reviews';
+@import './blocks/contacts';
+@import './blocks/partners';
+@import './blocks/svg-anim';
+@import './blocks/breadcrumbs';
+@import './blocks/services';
+@import './blocks/cert';
+@import './blocks/search-result';
+@import './blocks/custom-checkbox';
+@import './blocks/timetable';
+
+// HELPERS
+@import './base/helpers';

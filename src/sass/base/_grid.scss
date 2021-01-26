@@ -1,0 +1,124 @@
+.container {
+    width: 100%;
+    display: flex;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 96px;
+    padding-right: 96px;
+    @include r(1280px){
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    @include r(450px){
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    &--p8 {
+        padding-left: 88px;
+        padding-right: 88px;
+        @include r(1280px){
+            padding-left: 46px;
+            padding-right: 46px;
+        }
+        @include r(450px){
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+    &--p16 {
+        padding-left: 80px;
+        padding-right: 80px;
+        @include r(1280px){
+            padding-left: 38px;
+            padding-right: 38px;
+        }
+        @include r(450px){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+.mb {
+    &8 {
+        @include mb(8px)
+    }
+    &16 {
+        @include mb(16px)
+    }
+    &24 {
+        @include mb(24px)
+    }
+    &32 {
+        @include mb(32px)
+    }
+    &40 {
+        @include mb(40px)
+    }
+    &48 {
+        @include mb(48px)
+    }
+    &120 {
+        @include mb(120px)
+    }
+}
+
+.mt {
+    &8 {
+        @include mt(8px)
+    }
+    &16 {
+        @include mt(16px)
+    }
+    &24 {
+        @include mt(24px)
+    }
+    &32 {
+        @include mt(32px)
+    }
+    &40 {
+        @include mt(40px)
+    }
+    &48 {
+        @include mt(48px)
+    }
+    &120 {
+        @include mt(120px)
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    &.s-b {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &.horiz-st {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &.vert-center {
+        align-items: center;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    &.s-b {
+        justify-content: space-between;
+    }
+}
+
+.justy-center {
+    justify-content: center;
+}
+
+.fl-wrap {
+    flex-wrap: wrap;
+}

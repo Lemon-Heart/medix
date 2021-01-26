@@ -1,0 +1,10 @@
+.partners {
+    width: 100%;
+    justify-content: space-around;
+    @include r(600px) {
+        flex-direction: column;
+        img {
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.contacts {
+    width: 100%;
+
+    // Стили для страницы КОНТАКТЫ
+    &.contacts--page {
+        flex-wrap: wrap;
+    }
+    // end
+    // Стили для блока КОНТАКТЫ на главной странице
+    @include r(1200px) {
+        &:not(.contacts--page) {
+            flex-direction: column;
+        }
+    }
+    &__map {
+        width: 100%;
+        position: relative;
+        height: 400px;
+        @include r(1200px) {
+            height: 400px;
+        }
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
+        > ymaps {
+            max-height: 405px;
+            height: 100%;
+        }
+        .mapTitle {
+            position: absolute;
+            z-index: 1000;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 5px;
+            display: none;
+            padding: 5px 20px;
+            border-radius: 5px;
+            background: rgb(255, 255, 255);
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(204, 204, 204);
+            border-image: initial;
+        }
+    }
+    &__right {
+        padding: 40px;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+        flex: 0 0 auto;
+        width: 660px;
+        box-sizing: border-box;
+        border-radius: 0 10px 10px 0;
+        @include r(1200px) {
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+    }
+    &__descr {
+        display: grid;
+        grid-gap: 48px 110px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        @include r(780px) {
+            grid-gap: 48px;
+        }
+        @include r(670px) {
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+        h5:not(:last-child) {
+            margin-bottom: 16px;
+        }
+        span, a {
+            font-weight: 500;
+            font-size: clamp(16px, 4vw, 20px);
+            line-height: clamp(16px, 4vw, 20px);
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    // Стили для страницы КОНТАКТЫ
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+        span, a {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        a {
+            color: $color3;
+        }
+        @include r(1460px) {
+            width: 50%;
+            margin-left: 0!important;
+            margin-right: 0!important;
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+        @include r(630px) {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

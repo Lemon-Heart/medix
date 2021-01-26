@@ -1,0 +1,23 @@
+.cert {
+    &__item {
+        border-radius: 10px;
+        box-sizing: border-box;
+        height: fit-content;
+        width: calc(25% - 16px);
+        transition: .2s;
+        @include r(1350px) {
+            width: calc(33.33% - 16px);
+        }
+        @include r(900px) {
+            width: calc(50% - 16px);
+        }
+        @include r(550px) {
+            width: calc(100% - 16px);
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
